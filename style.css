@@ -29,7 +29,9 @@ h1, h2, h3 { margin: 0; }
 
 /* ---------- 背景（空・光線・雲・丘・泡）。すべて飾りで、操作のじゃまはしません ---------- */
 .bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
-  background: linear-gradient(180deg, #2c9ae6 0%, #5fc0f4 20%, #a4e0fb 46%, #d9f4ff 68%, #e6fae3 100%); }
+  background: #6fd9ff url("bg.jpg") center / cover no-repeat; }
+/* 空・光線・雲・丘は、背景画像（bg.jpg）に描かれているので、前のCSSの飾りは使いません。泡だけは、画像の上でふわふわ動きます */
+.bg .sun, .bg .rays, .bg .hills, .bg .bg-clouds { display: none; }
 .bg i { position: absolute; display: block; }
 .bg-clouds, .bg-bubbles { position: absolute; inset: 0; }
 .sun { left: -8vmax; top: -8vmax; width: 46vmax; height: 46vmax; border-radius: 50%;
